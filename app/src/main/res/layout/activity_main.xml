@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/первый"
+            android:textColor="#4C4B4B"
+            android:gravity="center"
+            android:text="@string/name1"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/второй"
+            android:textColor="#4C4B4B"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:text="@string/name2"/>
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/третий"
+            android:gravity="center"
+            android:text="@string/name3"
+            android:textColor="#4C4B4B"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/четвертый"
+            android:textColor="#4C4B4B"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:text="@string/name4"/>
+
+    </android.support.v7.widget.RecyclerView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frag1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </androidx.fragment.app.FragmentContainerView>
+</FrameLayout>
