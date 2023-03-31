@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Fragment1">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/первый"
@@ -31,5 +32,5 @@
             android:id="@+id/описание1.1.1"
             android:layout_width="match_parent"
             android:layout_height="76dp"></TextView>
-    </LinearLayout>
+    </androidx.recyclerview.widget.RecyclerView>
     </FrameLayout>

@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class Fragment1 extends androidx.fragment.app.Fragment {
     String y;
@@ -46,6 +48,14 @@ public class Fragment1 extends androidx.fragment.app.Fragment {
             Log.d(LOG_TAG, "Fragment1 onCreateView");
             return view;
 
+        }
+        private void initRecyclerView(View view){
+            RecyclerView recyclerView=view.findViewById(R.id.recyclerView);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+
+            recyclerView.setLayoutManager(layoutManager);
+
+            recyclerView.setAdapter();
         }
 
         public void onActivityCreated(Bundle savedInstanceState) {
