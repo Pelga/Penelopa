@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentManager n;
 
     private void buttonListener(String a, String b, String c) {
+        // njn
 
         n.beginTransaction()
                 .replace(R.id.frag1, new Fragment1(a, b, c))
