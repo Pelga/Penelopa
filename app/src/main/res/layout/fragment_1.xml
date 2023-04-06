@@ -16,8 +16,13 @@
 
         <TextView
             android:id="@+id/описание1"
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
+            android:layout_constraintStart_toStartOf="parent"
+            android:layout_constraintEnd_toEndOf="parent"
+            android:layout_constraintTop_toToptOf="parent"
+            android:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:textSize="45sp"
+            android:layout_height="wrap_content"
             android:rotationX="0"
           ></TextView>
 

@@ -10,10 +10,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class Fragment1 extends androidx.fragment.app.Fragment {
+import java.util.ArrayList;
+
+public class Fragment1 extends androidx.fragment.app.Fragment implements RecyclerViewAdapter.ItemClickListener {
+    private ArrayList<ViewFragment> list = new ArrayList<>();
     String y;
     String r;
     String u;
@@ -39,6 +43,7 @@ public class Fragment1 extends androidx.fragment.app.Fragment {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View view = inflater.inflate(R.layout.fragment_1, null);
+            buildListData();
             TextView tv = (TextView) view.findViewById(R.id.описание1);
             tv.setText(y);
             TextView tv1 = (TextView) view.findViewById(R.id.описание1_1);
@@ -54,8 +59,14 @@ public class Fragment1 extends androidx.fragment.app.Fragment {
             LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
             recyclerView.setLayoutManager(layoutManager);
-
-            recyclerView.setAdapter();
+            RecyclerViewAdapter adapter= new RecyclerViewAdapter(list, this.);
+            recyclerView.setAdapter(adapter);
+        }
+        private void buildListData(){
+            list.add(new ViewFragment("@string/name1"));
+            list.add(new ViewFragment("@string/name2"));
+            list.add(new ViewFragment("@string/name3"));
+            list.add(new ViewFragment("@string/name4"));
         }
 
         public void onActivityCreated(Bundle savedInstanceState) {
@@ -97,4 +108,9 @@ public class Fragment1 extends androidx.fragment.app.Fragment {
             super.onDetach();
             Log.d(LOG_TAG, "Fragment1 onDetach");
         }
+
+    @Override
+    public void onItemClick(ViewFragment viewFragment) {
+            Fragment fragment = DetailFragment.newInstance();
     }
+}

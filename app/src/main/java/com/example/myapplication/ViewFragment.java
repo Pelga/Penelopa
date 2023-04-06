@@ -13,6 +13,10 @@ public class ViewFragment extends RecyclerView.ViewHolder {
         this.title = title;
     }
 
+    public ViewFragment(String title) {
+        super();
+    }
+
     public String getTitle() {
         return title;
     }
